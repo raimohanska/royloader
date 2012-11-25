@@ -4,7 +4,7 @@ $(function() {
     var indent = indentation(s)
     var firstLine = new RegExp("^" + indent)
     var otherLines = new RegExp("\n" + indent, "g")
-    return s.replace(firstLine, "").replace(otherLines, "\n")
+    return s.replace(firstLine, "").replace(otherLines, "\n").replace(/\n\s*$/, "")
   }
   var env = {};
   var aliases = {};
