@@ -6,6 +6,11 @@ $(function() {
     var otherLines = new RegExp("\n" + indent, "g")
     return s.replace(firstLine, "").replace(otherLines, "\n")
   }
+  var env = {};
+  var aliases = {};
+  function eval_(code) {
+    return eval.call(this, code);
+  }
   $("script[language=roy]").each(function(i, scriptTag) {
     var element = $(scriptTag)
     var url = element.attr("src")
@@ -13,7 +18,7 @@ $(function() {
       console.log("src attribute not supported yet")
     } else {
       roySrc = removeIndent(element.html().replace(/^\s*\n/g, ""))
-      eval(roy.compile(roySrc).output, {}, {}, {nodejs:true})
+      eval_(roy.compile(roySrc, env, aliases, {nodejs:true}).output)
     }
   })
 })
