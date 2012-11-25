@@ -8,6 +8,14 @@ See example usage in [index.html](https://github.com/raimohanska/royloader/blob/
 
 *Disclaimer*: this is in "early alpha" or more like on the "I've tried this once with the alert('lol') example" stage
 
+### Features
+
+- Finds roy scripts based on the `language` attribute
+- Compiles and evaluates scripts
+- Exposes all root-level definitions globally. For example "let x = 1" compiles to "var x = 1"
+- Maintains Roy type information between scripts. So if you define "let x = 1" in your first script,
+  the compiler will know that `x` is a Number when it compiles your second script
+
 ### TODO
 
 - gather experience on how this works in practise
