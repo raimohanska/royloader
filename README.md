@@ -20,6 +20,7 @@ See example usage in [index.html](https://github.com/raimohanska/royloader/blob/
 
 - gather experience on how this works in practise
 - find out how other similar loaders actually work and do the same (if good)
+- get rid of jQuery dep
 - add to bower (roy's not there either yet)
 - maybe contribute this to the roy core (when the loader code is more solid)
 - print t-shirts (sell for profit)
