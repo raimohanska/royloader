@@ -11,7 +11,7 @@ See example usage in [index.html](https://github.com/raimohanska/royloader/blob/
 ### Features
 
 - Finds roy scripts based on the `language` attribute
-- Compiles and evaluates scripts on the jQuery `document.ready` event
+- Finds, compiles and evaluates scripts on the jQuery `document.ready` event
 - Exposes all root-level definitions globally. For example "let x = 1" compiles to "var x = 1"
 - Maintains Roy type information between scripts. So if you define "let x = 1" in your first script,
   the compiler will know that `x` is a Number when it compiles your second script
